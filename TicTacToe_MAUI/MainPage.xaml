@@ -52,48 +52,66 @@
                 <Frame>
                     <Grid
                         RowDefinitions="*"
-                        ColumnDefinitions="*,auto,*">
-                        <HorizontalStackLayout
+                        ColumnDefinitions="*,*,*">
+                        <Grid
+                            RowDefinitions="*"
+                            ColumnDefinitions="*,*,*"
                             Grid.Row="0"
-                            Grid.Column="1">
+                            Grid.Column="1"
+                            HorizontalOptions="Center">
                             <Image
                                 Source="person.svg"
                                 HeightRequest="50"
-                                HorizontalOptions="Center" />
+                                HorizontalOptions="Center"
+                                Grid.Row="0"
+                                Grid.Column="0"/>
                             <Image
                                 Source="arrows.svg"
                                 HeightRequest="50"
                                 HorizontalOptions="Center"
-                                Margin="20,0,20,0"/>
+                                Margin="20,0,20,0"
+                                Grid.Row="0"
+                                Grid.Column="1"/>
                             <Image
                                 Source="person.svg"
                                 HeightRequest="50"
-                                HorizontalOptions="Center"/>
-                        </HorizontalStackLayout>
+                                HorizontalOptions="Center"
+                                Grid.Row="0"
+                                Grid.Column="2"/>
+                        </Grid>
                     </Grid>
                 </Frame>
 
                 <Frame>
                     <Grid
                         RowDefinitions="*"
-                        ColumnDefinitions="*,auto,*">
-                        <HorizontalStackLayout
+                        ColumnDefinitions="*,*,*">
+                        <Grid
+                            RowDefinitions="*"
+                            ColumnDefinitions="*,*,*"
                             Grid.Row="0"
-                            Grid.Column="1">
+                            Grid.Column="1"
+                            HorizontalOptions="Center">
                             <Image
                                 Source="person.svg"
                                 HeightRequest="50"
-                                HorizontalOptions="Center" />
+                                HorizontalOptions="Center"
+                                Grid.Row="0"
+                                Grid.Column="0"/>
                             <Image
                                 Source="arrows.svg"
                                 HeightRequest="50"
                                 HorizontalOptions="Center"
-                                Margin="20,0,20,0"/>
+                                Margin="20,0,20,0"
+                                Grid.Row="0"
+                                Grid.Column="1"/>
                             <Image
                                 Source="cpu.svg"
                                 HeightRequest="50"
-                                HorizontalOptions="Center"/>
-                        </HorizontalStackLayout>
+                                HorizontalOptions="Center"
+                                Grid.Row="0"
+                                Grid.Column="2"/>
+                        </Grid>
                     </Grid>
                 </Frame>
 
