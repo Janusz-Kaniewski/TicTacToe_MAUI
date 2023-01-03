@@ -1,41 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="TicTacToe_MAUI.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <Grid
+            ColumnDefinitions="*"
+            RowDefinitions="*, auto">
+            <VerticalStackLayout
+                Spacing="25"
+                Padding="30,0"
+                VerticalOptions="Center"
+                Grid.Column="0"
+                Grid.Row="0">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                <Label
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,0,0,20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span
+                                    FontSize="64"
+                                    Text="TIC"
+                                    TextColor="BlueViolet">
+                                </Span>
+                                <Span Text="{x:Static system:Environment.NewLine}"/>
+                                <Span
+                                    FontSize="64"
+                                    Text="TAC"
+                                    TextColor="DarkCyan">
+                                </Span>
+                                <Span Text="{x:Static system:Environment.NewLine}"/>
+                                <Span
+                                    FontSize="64"
+                                    Text="TOE"
+                                    TextColor="IndianRed">
+                                </Span>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
+                <Label
+                    Text="Select type of game"
+                    HorizontalTextAlignment="Center"
+                />
+
+                <Frame>
+                    <Grid
+                        RowDefinitions="*"
+                        ColumnDefinitions="*,auto,*">
+                        <HorizontalStackLayout
+                            Grid.Row="0"
+                            Grid.Column="1">
+                            <Image
+                                Source="person.svg"
+                                HeightRequest="50"
+                                HorizontalOptions="Center" />
+                            <Image
+                                Source="arrows.svg"
+                                HeightRequest="50"
+                                HorizontalOptions="Center"
+                                Margin="20,0,20,0"/>
+                            <Image
+                                Source="person.svg"
+                                HeightRequest="50"
+                                HorizontalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame>
+                    <Grid
+                        RowDefinitions="*"
+                        ColumnDefinitions="*,auto,*">
+                        <HorizontalStackLayout
+                            Grid.Row="0"
+                            Grid.Column="1">
+                            <Image
+                                Source="person.svg"
+                                HeightRequest="50"
+                                HorizontalOptions="Center" />
+                            <Image
+                                Source="arrows.svg"
+                                HeightRequest="50"
+                                HorizontalOptions="Center"
+                                Margin="20,0,20,0"/>
+                            <Image
+                                Source="cpu.svg"
+                                HeightRequest="50"
+                                HorizontalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
+                Text="2023   Janusz Kaniewski"
+                HorizontalTextAlignment="Center"
+                Grid.Column="0"
+                Grid.Row="1"/>
+        </Grid>
+       
     </ScrollView>
 
 </ContentPage>
